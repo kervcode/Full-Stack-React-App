@@ -4,6 +4,12 @@ const app = express();
 const db = require('./models');
 
 
+app.use(express.json());
+
+
+// ROUTERS
+const postRouter = require('./routes/Posts');
+app.use('/post', postRouter);
 
 
 
